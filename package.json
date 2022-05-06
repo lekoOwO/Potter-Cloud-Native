@@ -1,0 +1,14 @@
+{
+  "name": "potter-cloud-native",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Leko",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^10.0.0"
+  }
+}
