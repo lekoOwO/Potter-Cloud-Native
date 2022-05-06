@@ -17,4 +17,11 @@ describe('Test Price', ()=> {
         assert.equal(8 * 4 * 0.8, price([0, 1, 2, 4]))
         assert.equal(8 * 5 * 0.75, price([0, 1, 2, 3, 4]))
     });
+
+    it('SeveralDiscounts', () => {
+        assert.equal(8 + (8 * 2 * 0.95), price([0, 0, 1]))
+        assert.equal(2 * (8 * 2 * 0.95), price([0, 0, 1, 1]))
+        assert.equal((8 * 4 * 0.8) + (8 * 2 * 0.95), price([0, 0, 1, 2, 2, 3]))
+        assert.equal(8 + (8 * 5 * 0.75), price([0, 1, 1, 2, 3, 4]))
+    });
 });
